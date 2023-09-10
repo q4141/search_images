@@ -1,6 +1,7 @@
 import axios from "axios";
 import "./api.css";
-import PRIVATE_API_KEY from "../key";
+
+const PRIVATE_API_KEY = import.meta.env.VITE_PRIVATE_API_KEY;
 const searchImages = async (term) => {
   try {
     const response = await axios.get("https://api.unsplash.com/search/photos", {
