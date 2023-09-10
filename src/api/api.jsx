@@ -1,11 +1,11 @@
 import axios from "axios";
 import "./api.css";
-
+import PRIVATE_API_KEY from "../key";
 const searchImages = async (term) => {
   try {
     const response = await axios.get("https://api.unsplash.com/search/photos", {
       headers: {
-        Authorization: "Client-ID msx-sJbAsawBF9fjAY8j3BYNaUlmmuUcvCcZZPacTZ4",
+        Authorization: `Client-ID ${PRIVATE_API_KEY}`,
       },
       params: {
         query: term,
